@@ -1,0 +1,18 @@
+{
+  "schema": "stridequeue.jcstress-summary.v1",
+  "result_records": 510,
+  "passing_records": 510,
+  "failed_records": 0,
+  "interesting_records": 0,
+  "observations": 12726025690,
+  "statuses": {
+    "NORMAL": 510
+  },
+  "tests": {
+    "io.github.ag0708.stridequeue.jcstress.ArrayQueuePublicationTest": {"records": 102, "passing_records": 102, "observations": 3504402322},
+    "io.github.ag0708.stridequeue.jcstress.ArrayQueueTwoProducerTest": {"records": 102, "passing_records": 102, "observations": 2632681362},
+    "io.github.ag0708.stridequeue.jcstress.MichaelScottTwoProducerTest": {"records": 102, "passing_records": 102, "observations": 2607787922},
+    "io.github.ag0708.stridequeue.jcstress.MpscArrayQueueTwoProducerTest": {"records": 102, "passing_records": 102, "observations": 2201341842},
+    "io.github.ag0708.stridequeue.jcstress.MpscBatchReservationTest": {"records": 102, "passing_records": 102, "observations": 1779812242}
+  }
+}

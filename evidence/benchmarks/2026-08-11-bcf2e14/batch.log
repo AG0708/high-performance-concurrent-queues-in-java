@@ -1,0 +1,407 @@
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 3x "putBatch", 1x "takeBatch" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = stride-batch)
+
+# Run progress: 0.00% complete, ETA 00:01:12
+# Fork: 1 of 3
+# Warmup Iteration   1: 282138101.431 ops/s
+# Warmup Iteration   2: 279726079.265 ops/s
+# Warmup Iteration   3: 545038844.669 ops/s
+# Warmup Iteration   4: 402039887.355 ops/s
+# Warmup Iteration   5: 489247825.404 ops/s
+Iteration   1: 458862000.383 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 17502057.000 #
+                 putBatch:      229437829.112 ops/s
+                 takeBatch:     229424171.271 ops/s
+
+Iteration   2: 508198088.020 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 10150290.000 #
+                 putBatch:      254106095.269 ops/s
+                 takeBatch:     254091992.751 ops/s
+
+Iteration   3: 387838212.413 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 21463109.000 #
+                 putBatch:      193935495.437 ops/s
+                 takeBatch:     193902716.976 ops/s
+
+Iteration   4: 332151423.523 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 21311890.000 #
+                 putBatch:      166092109.235 ops/s
+                 takeBatch:     166059314.288 ops/s
+
+Iteration   5: 321547266.347 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 34966407.000 #
+                 putBatch:      160790058.226 ops/s
+                 takeBatch:     160757208.122 ops/s
+
+Iteration   6: 508934095.326 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 13491836.000 #
+                 putBatch:      254485331.426 ops/s
+                 takeBatch:     254448763.899 ops/s
+
+Iteration   7: 365715596.915 ops/s
+                 consumerWaits: 99363.000 #
+                 producerWaits: 25428991.000 #
+                 putBatch:      182858781.335 ops/s
+                 takeBatch:     182856815.580 ops/s
+
+
+# Run progress: 16.67% complete, ETA 00:01:01
+# Fork: 2 of 3
+# Warmup Iteration   1: 211888019.542 ops/s
+# Warmup Iteration   2: 216282196.604 ops/s
+# Warmup Iteration   3: 388065141.775 ops/s
+# Warmup Iteration   4: 364158125.947 ops/s
+# Warmup Iteration   5: 306670607.966 ops/s
+Iteration   1: 401138887.704 ops/s
+                 consumerWaits: 5211.000 #
+                 producerWaits: 21840498.000 #
+                 putBatch:      200581327.544 ops/s
+                 takeBatch:     200557560.160 ops/s
+
+Iteration   2: 277106047.428 ops/s
+                 consumerWaits: 4016.000 #
+                 producerWaits: 37609554.000 #
+                 putBatch:      138568790.711 ops/s
+                 takeBatch:     138537256.718 ops/s
+
+Iteration   3: 330121493.782 ops/s
+                 consumerWaits: 8980.000 #
+                 producerWaits: 27367178.000 #
+                 putBatch:      165086480.833 ops/s
+                 takeBatch:     165035012.949 ops/s
+
+Iteration   4: 419908625.818 ops/s
+                 consumerWaits: 3676.000 #
+                 producerWaits: 17905146.000 #
+                 putBatch:      209970182.501 ops/s
+                 takeBatch:     209938443.317 ops/s
+
+Iteration   5: 321341512.848 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 28186019.000 #
+                 putBatch:      160686946.036 ops/s
+                 takeBatch:     160654566.813 ops/s
+
+Iteration   6: 477757552.785 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 16819662.000 #
+                 putBatch:      238886637.406 ops/s
+                 takeBatch:     238870915.379 ops/s
+
+Iteration   7: 285087246.323 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 30585241.000 #
+                 putBatch:      142547678.364 ops/s
+                 takeBatch:     142539567.959 ops/s
+
+
+# Run progress: 33.33% complete, ETA 00:00:49
+# Fork: 3 of 3
+# Warmup Iteration   1: 255778876.915 ops/s
+# Warmup Iteration   2: 297533583.770 ops/s
+# Warmup Iteration   3: 388508757.241 ops/s
+# Warmup Iteration   4: 310507750.999 ops/s
+# Warmup Iteration   5: 421641604.792 ops/s
+Iteration   1: 283833448.437 ops/s
+                 consumerWaits: 4222.000 #
+                 producerWaits: 32669730.000 #
+                 putBatch:      141932386.859 ops/s
+                 takeBatch:     141901061.578 ops/s
+
+Iteration   2: 367520367.265 ops/s
+                 consumerWaits: 342106.000 #
+                 producerWaits: 22310893.000 #
+                 putBatch:      183774293.040 ops/s
+                 takeBatch:     183746074.225 ops/s
+
+Iteration   3: 304438143.114 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 26708491.000 #
+                 putBatch:      152234029.572 ops/s
+                 takeBatch:     152204113.541 ops/s
+
+Iteration   4: 353207443.372 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 31221057.000 #
+                 putBatch:      176618315.515 ops/s
+                 takeBatch:     176589127.857 ops/s
+
+Iteration   5: 458373675.829 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 9839050.000 #
+                 putBatch:      229181722.503 ops/s
+                 takeBatch:     229191953.326 ops/s
+
+Iteration   6: 386831894.454 ops/s
+                 consumerWaits: 7.000 #
+                 producerWaits: 14049853.000 #
+                 putBatch:      193434029.195 ops/s
+                 takeBatch:     193397865.258 ops/s
+
+Iteration   7: 448575339.600 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 9778420.000 #
+                 putBatch:      224297570.895 ops/s
+                 takeBatch:     224277768.705 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers":
+  380880398.176 ±(99.9%) 62036507.857 ops/s [Average]
+  (min, avg, max) = (277106047.428, 380880398.176, 508934095.326), stdev = 73850056.163
+  CI (99.9%): [318843890.319, 442916906.032] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:consumerWaits":
+  467581.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (≈ 0, 22265.762, 342106.000), stdev = 76372.029
+  CI (99.9%): [467581.000, 467581.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:producerWaits":
+  471205372.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (9778420.000, 22438351.048, 37609554.000), stdev = 8424112.712
+  CI (99.9%): [471205372.000, 471205372.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:putBatch":
+  190452671.001 ±(99.9%) 31016292.044 ops/s [Average]
+  (min, avg, max) = (138568790.711, 190452671.001, 254485331.426), stdev = 36922692.598
+  CI (99.9%): [159436378.956, 221468963.045] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:takeBatch":
+  190427727.175 ±(99.9%) 31020216.768 ops/s [Average]
+  (min, avg, max) = (138537256.718, 190427727.175, 254448763.899), stdev = 36927364.702
+  CI (99.9%): [159407510.407, 221447943.943] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 3x "putBatch", 1x "takeBatch" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = array-blocking-loop)
+
+# Run progress: 50.00% complete, ETA 00:00:37
+# Fork: 1 of 3
+# Warmup Iteration   1: 71736212.825 ops/s
+# Warmup Iteration   2: 91570009.257 ops/s
+# Warmup Iteration   3: 141912946.288 ops/s
+# Warmup Iteration   4: 134992605.024 ops/s
+# Warmup Iteration   5: 141663815.319 ops/s
+Iteration   1: 135828320.049 ops/s
+                 consumerWaits: 164923.000 #
+                 producerWaits: 40271087.000 #
+                 putBatch:      67930566.695 ops/s
+                 takeBatch:     67897753.354 ops/s
+
+Iteration   2: 132467554.126 ops/s
+                 consumerWaits: ≈ 0 #
+                 producerWaits: 52177466.000 #
+                 putBatch:      66239344.970 ops/s
+                 takeBatch:     66228209.155 ops/s
+
+Iteration   3: 134438562.388 ops/s
+                 consumerWaits: 56764.000 #
+                 producerWaits: 49298011.000 #
+                 putBatch:      67230727.680 ops/s
+                 takeBatch:     67207834.708 ops/s
+
+Iteration   4: 146104276.063 ops/s
+                 consumerWaits: 71593.000 #
+                 producerWaits: 40854242.000 #
+                 putBatch:      73068324.214 ops/s
+                 takeBatch:     73035951.850 ops/s
+
+Iteration   5: 152413227.969 ops/s
+                 consumerWaits: 52100.000 #
+                 producerWaits: 38942505.000 #
+                 putBatch:      76214920.119 ops/s
+                 takeBatch:     76198307.850 ops/s
+
+Iteration   6: 132708725.073 ops/s
+                 consumerWaits: 132922.000 #
+                 producerWaits: 50908908.000 #
+                 putBatch:      66364641.415 ops/s
+                 takeBatch:     66344083.658 ops/s
+
+Iteration   7: 135822976.100 ops/s
+                 consumerWaits: 15494.000 #
+                 producerWaits: 52024536.000 #
+                 putBatch:      67916247.278 ops/s
+                 takeBatch:     67906728.822 ops/s
+
+
+# Run progress: 66.67% complete, ETA 00:00:24
+# Fork: 2 of 3
+# Warmup Iteration   1: 99310163.226 ops/s
+# Warmup Iteration   2: 102254128.274 ops/s
+# Warmup Iteration   3: 129027984.072 ops/s
+# Warmup Iteration   4: 141746040.651 ops/s
+# Warmup Iteration   5: 144265638.105 ops/s
+Iteration   1: 139830308.851 ops/s
+                 consumerWaits: 7973.000 #
+                 producerWaits: 40345336.000 #
+                 putBatch:      69923627.000 ops/s
+                 takeBatch:     69906681.851 ops/s
+
+Iteration   2: 151815317.923 ops/s
+                 consumerWaits: 31680.000 #
+                 producerWaits: 34452282.000 #
+                 putBatch:      75919719.238 ops/s
+                 takeBatch:     75895598.685 ops/s
+
+Iteration   3: 134851724.878 ops/s
+                 consumerWaits: 1189154.000 #
+                 producerWaits: 48624370.000 #
+                 putBatch:      67437301.603 ops/s
+                 takeBatch:     67414423.275 ops/s
+
+Iteration   4: 158353113.087 ops/s
+                 consumerWaits: 192394.000 #
+                 producerWaits: 31866372.000 #
+                 putBatch:      79187283.716 ops/s
+                 takeBatch:     79165829.371 ops/s
+
+Iteration   5: 148087130.260 ops/s
+                 consumerWaits: 40683.000 #
+                 producerWaits: 40094937.000 #
+                 putBatch:      74054045.548 ops/s
+                 takeBatch:     74033084.712 ops/s
+
+Iteration   6: 147694681.982 ops/s
+                 consumerWaits: 15486.000 #
+                 producerWaits: 38080943.000 #
+                 putBatch:      73864529.720 ops/s
+                 takeBatch:     73830152.262 ops/s
+
+Iteration   7: 143106486.502 ops/s
+                 consumerWaits: 408579.000 #
+                 producerWaits: 39287028.000 #
+                 putBatch:      71560276.396 ops/s
+                 takeBatch:     71546210.106 ops/s
+
+
+# Run progress: 83.33% complete, ETA 00:00:12
+# Fork: 3 of 3
+# Warmup Iteration   1: 104150752.183 ops/s
+# Warmup Iteration   2: 113490675.954 ops/s
+# Warmup Iteration   3: 154096754.387 ops/s
+# Warmup Iteration   4: 142747731.156 ops/s
+# Warmup Iteration   5: 117853792.358 ops/s
+Iteration   1: 135166247.591 ops/s
+                 consumerWaits: 72848.000 #
+                 producerWaits: 47095829.000 #
+                 putBatch:      67585186.355 ops/s
+                 takeBatch:     67581061.236 ops/s
+
+Iteration   2: 136913061.403 ops/s
+                 consumerWaits: 224294.000 #
+                 producerWaits: 38454097.000 #
+                 putBatch:      68474028.137 ops/s
+                 takeBatch:     68439033.266 ops/s
+
+Iteration   3: 143034230.688 ops/s
+                 consumerWaits: 56625.000 #
+                 producerWaits: 43182183.000 #
+                 putBatch:      71529975.186 ops/s
+                 takeBatch:     71504255.502 ops/s
+
+Iteration   4: 150326355.658 ops/s
+                 consumerWaits: 473831.000 #
+                 producerWaits: 32764907.000 #
+                 putBatch:      75178688.848 ops/s
+                 takeBatch:     75147666.810 ops/s
+
+Iteration   5: 152427414.918 ops/s
+                 consumerWaits: 142456.000 #
+                 producerWaits: 30904041.000 #
+                 putBatch:      76220272.123 ops/s
+                 takeBatch:     76207142.795 ops/s
+
+Iteration   6: 136823662.517 ops/s
+                 consumerWaits: 58041.000 #
+                 producerWaits: 50228155.000 #
+                 putBatch:      68410753.944 ops/s
+                 takeBatch:     68412908.573 ops/s
+
+Iteration   7: 129444022.933 ops/s
+                 consumerWaits: 268983.000 #
+                 producerWaits: 46201439.000 #
+                 putBatch:      64743477.574 ops/s
+                 takeBatch:     64700545.359 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers":
+  141793209.569 ±(99.9%) 6930728.751 ops/s [Average]
+  (min, avg, max) = (129444022.933, 141793209.569, 158353113.087), stdev = 8250540.290
+  CI (99.9%): [134862480.818, 148723938.321] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:consumerWaits":
+  3676823.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (≈ 0, 175086.810, 1189154.000), stdev = 265778.064
+  CI (99.9%): [3676823.000, 3676823.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:producerWaits":
+  886058674.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (30904041.000, 42193270.190, 52177466.000), stdev = 6767181.741
+  CI (99.9%): [886058674.000, 886058674.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:putBatch":
+  70907330.369 ±(99.9%) 3465574.547 ops/s [Average]
+  (min, avg, max) = (64743477.574, 70907330.369, 79187283.716), stdev = 4125520.340
+  CI (99.9%): [67441755.822, 74372904.917] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.MpscBatchBenchmark.transfers:takeBatch":
+  70885879.200 ±(99.9%) 3465160.443 ops/s [Average]
+  (min, avg, max) = (64700545.359, 70885879.200, 79165829.371), stdev = 4125027.378
+  CI (99.9%): [67420718.757, 74351039.643] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:14
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                   (capacity)     (implementation)   Mode  Cnt          Score          Error  Units
+MpscBatchBenchmark.transfers                     65536         stride-batch  thrpt   21  380880398.176 ± 62036507.857  ops/s
+MpscBatchBenchmark.transfers:consumerWaits       65536         stride-batch  thrpt   21     467581.000                     #
+MpscBatchBenchmark.transfers:producerWaits       65536         stride-batch  thrpt   21  471205372.000                     #
+MpscBatchBenchmark.transfers:putBatch            65536         stride-batch  thrpt   21  190452671.001 ± 31016292.044  ops/s
+MpscBatchBenchmark.transfers:takeBatch           65536         stride-batch  thrpt   21  190427727.175 ± 31020216.768  ops/s
+MpscBatchBenchmark.transfers                     65536  array-blocking-loop  thrpt   21  141793209.569 ±  6930728.751  ops/s
+MpscBatchBenchmark.transfers:consumerWaits       65536  array-blocking-loop  thrpt   21    3676823.000                     #
+MpscBatchBenchmark.transfers:producerWaits       65536  array-blocking-loop  thrpt   21  886058674.000                     #
+MpscBatchBenchmark.transfers:putBatch            65536  array-blocking-loop  thrpt   21   70907330.369 ±  3465574.547  ops/s
+MpscBatchBenchmark.transfers:takeBatch           65536  array-blocking-loop  thrpt   21   70885879.200 ±  3465160.443  ops/s
+
+Benchmark result is saved to artifacts/benchmarks/release-bcf2e14/batch.json

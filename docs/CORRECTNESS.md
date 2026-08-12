@@ -24,6 +24,8 @@ The tests cover:
 
 Every unlisted outcome is forbidden. The release mode increases forks, iterations, and per-iteration time.
 
+The recorded release run produced 510 passing result records and 12,726,025,690 sampled outcomes with zero failed or interesting records. The raw stream, generated summary, checksums, and HTML report are under [`evidence/jcstress/2026-08-11-bcf2e14`](../evidence/jcstress/2026-08-11-bcf2e14/).
+
 ## What the tests do not prove
 
 Testing cannot prove correctness for every schedule, JVM, or counter value. The exhaustive checker is bounded to small histories, stress runs are finite, and JCStress samples JVM executions. Each gate is independent enough to catch different classes of errors, but the progress and memory-order arguments in [DESIGN.md](DESIGN.md) remain necessary.

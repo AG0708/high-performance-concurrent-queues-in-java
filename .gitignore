@@ -9,3 +9,4 @@ artifacts/jcstress/
 artifacts/test-runs/
 scripts/__pycache__/
 jcstress-results-*.bin.gz
+!evidence/jcstress/**/jcstress-results-*.bin.gz

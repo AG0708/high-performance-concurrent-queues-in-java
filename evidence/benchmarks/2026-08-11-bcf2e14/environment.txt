@@ -1,0 +1,10 @@
+captured_utc=2026-08-12T01:40:40Z
+git_commit=bcf2e14aea5d095876be1048e4a68b6a63b3a4bd
+git_worktree=clean
+logical_cpus=10
+cpu=Apple M5
+memory_gb=16
+Darwin MacBook-Pro-4.local 25.5.0 Darwin Kernel Version 25.5.0: Mon Apr 27 20:39:29 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T8142 arm64
+openjdk version "21.0.10" 2026-01-20
+OpenJDK Runtime Environment Homebrew (build 21.0.10)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.10, mixed mode, sharing)

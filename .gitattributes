@@ -7,3 +7,4 @@
 mvnw text eol=lf
 *.cmd text eol=crlf
 *.gz binary
+evidence/benchmarks/**/*.json -whitespace

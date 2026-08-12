@@ -1,0 +1,107 @@
+{
+  "batch": {
+    "array-blocking-loop": {
+      "confidence": [
+        134862480.81819713,
+        148723938.32061213
+      ],
+      "score": 141793209.56940463,
+      "score_error": 6930728.751207498,
+      "unit": "ops/s"
+    },
+    "stride-batch": {
+      "confidence": [
+        318843890.31884384,
+        442916906.0322106
+      ],
+      "score": 380880398.1755272,
+      "score_error": 62036507.85668334,
+      "unit": "ops/s"
+    }
+  },
+  "comparisons": {
+    "batch_vs_array_blocking": 2.686168112931351,
+    "single_mpsc_vs_array_blocking": 0.1419762049043548
+  },
+  "methodology": {
+    "batch_size": 32,
+    "capacity": 65536,
+    "mpmc_threads": {
+      "consumers": 2,
+      "producers": 2
+    },
+    "mpsc_threads": {
+      "consumers": 1,
+      "producers": 3
+    },
+    "score": "successful queue operations per second"
+  },
+  "mpmc": {
+    "array-blocking": {
+      "confidence": [
+        133251881.40179276,
+        150991637.67299277
+      ],
+      "score": 142121759.53739277,
+      "score_error": 8869878.135599995,
+      "unit": "ops/s"
+    },
+    "jdk-clq": {
+      "confidence": [
+        27287197.941406265,
+        30545089.184682332
+      ],
+      "score": 28916143.5630443,
+      "score_error": 1628945.621638035,
+      "unit": "ops/s"
+    },
+    "michael-scott": {
+      "confidence": [
+        15017331.310518194,
+        21920382.198607188
+      ],
+      "score": 18468856.75456269,
+      "score_error": 3451525.444044498,
+      "unit": "ops/s"
+    },
+    "stride-compact": {
+      "confidence": [
+        16112000.990326231,
+        19420622.946324605
+      ],
+      "score": 17766311.968325417,
+      "score_error": 1654310.9779991868,
+      "unit": "ops/s"
+    },
+    "stride-padded": {
+      "confidence": [
+        15117324.365880007,
+        19438699.181974716
+      ],
+      "score": 17278011.77392736,
+      "score_error": 2160687.4080473543,
+      "unit": "ops/s"
+    }
+  },
+  "mpsc_single": {
+    "array-blocking": {
+      "confidence": [
+        105221918.73339543,
+        132584795.69958833
+      ],
+      "score": 118903357.21649188,
+      "score_error": 13681438.483096454,
+      "unit": "ops/s"
+    },
+    "stride-mpsc": {
+      "confidence": [
+        15362144.480010241,
+        18400750.33595845
+      ],
+      "score": 16881447.407984346,
+      "score_error": 1519302.9279741056,
+      "unit": "ops/s"
+    }
+  },
+  "schema": "stridequeue.benchmark-summary.v1"
+}

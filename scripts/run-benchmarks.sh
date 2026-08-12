@@ -30,7 +30,18 @@ mkdir -p "$output_dir"
   else
     printf 'git_commit=uncommitted\n'
   fi
+  if [ -z "$(git status --porcelain 2>/dev/null)" ]; then
+    printf 'git_worktree=clean\n'
+  else
+    printf 'git_worktree=dirty\n'
+  fi
   printf 'logical_cpus=%s\n' "$(getconf _NPROCESSORS_ONLN 2>/dev/null || sysctl -n hw.logicalcpu)"
+  if cpu_label="$(sysctl -n machdep.cpu.brand_string 2>/dev/null)"; then
+    printf 'cpu=%s\n' "$cpu_label"
+  fi
+  if memory_bytes="$(sysctl -n hw.memsize 2>/dev/null)"; then
+    printf 'memory_bytes=%s\n' "$memory_bytes"
+  fi
   uname -a
   java -version
 } >"$output_dir/environment.txt" 2>&1

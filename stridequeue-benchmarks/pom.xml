@@ -6,7 +6,7 @@
   <parent>
     <groupId>io.github.ag0708</groupId>
     <artifactId>stridequeue-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
 
   <artifactId>stridequeue-benchmarks</artifactId>

@@ -1,0 +1,986 @@
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 2x "put", 2x "take" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = stride-compact)
+
+# Run progress: 0.00% complete, ETA 00:03:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 18535900.779 ops/s
+# Warmup Iteration   2: 17133275.533 ops/s
+# Warmup Iteration   3: 18331241.933 ops/s
+# Warmup Iteration   4: 16903183.467 ops/s
+# Warmup Iteration   5: 18952179.969 ops/s
+Iteration   1: 21523259.326 ops/s
+                 offerRetries: 7900273.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          10774862.607 ops/s
+                 take:         10748396.719 ops/s
+
+Iteration   2: 19372833.789 ops/s
+                 offerRetries: 8896275.000 #
+                 pollRetries:  168702.000 #
+                 put:          9698267.707 ops/s
+                 take:         9674566.082 ops/s
+
+Iteration   3: 16567122.079 ops/s
+                 offerRetries: 28206187.000 #
+                 pollRetries:  272805.000 #
+                 put:          8292060.981 ops/s
+                 take:         8275061.099 ops/s
+
+Iteration   4: 15514756.983 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  95387.000 #
+                 put:          7740269.976 ops/s
+                 take:         7774487.007 ops/s
+
+Iteration   5: 18452043.115 ops/s
+                 offerRetries: 1544785.000 #
+                 pollRetries:  444444.000 #
+                 put:          9215029.896 ops/s
+                 take:         9237013.219 ops/s
+
+Iteration   6: 22387869.168 ops/s
+                 offerRetries: 1760728.000 #
+                 pollRetries:  560004.000 #
+                 put:          11190188.430 ops/s
+                 take:         11197680.739 ops/s
+
+Iteration   7: 19923315.316 ops/s
+                 offerRetries: 4240116.000 #
+                 pollRetries:  859160.000 #
+                 put:          9956244.212 ops/s
+                 take:         9967071.104 ops/s
+
+
+# Run progress: 6.67% complete, ETA 00:02:51
+# Fork: 2 of 3
+# Warmup Iteration   1: 18290191.944 ops/s
+# Warmup Iteration   2: 19040292.303 ops/s
+# Warmup Iteration   3: 19189733.810 ops/s
+# Warmup Iteration   4: 16452070.864 ops/s
+# Warmup Iteration   5: 16839476.833 ops/s
+Iteration   1: 16408355.736 ops/s
+                 offerRetries: 35391407.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8220380.997 ops/s
+                 take:         8187974.738 ops/s
+
+Iteration   2: 17299337.587 ops/s
+                 offerRetries: 23780105.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8665989.993 ops/s
+                 take:         8633347.594 ops/s
+
+Iteration   3: 17443042.427 ops/s
+                 offerRetries: 22661254.000 #
+                 pollRetries:  166530.000 #
+                 put:          8736756.825 ops/s
+                 take:         8706285.601 ops/s
+
+Iteration   4: 15785142.146 ops/s
+                 offerRetries: 84863433.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7908972.490 ops/s
+                 take:         7876169.656 ops/s
+
+Iteration   5: 19661256.639 ops/s
+                 offerRetries: 6982196.000 #
+                 pollRetries:  66160.000 #
+                 put:          9816674.395 ops/s
+                 take:         9844582.244 ops/s
+
+Iteration   6: 15247662.503 ops/s
+                 offerRetries: 88031282.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7639710.957 ops/s
+                 take:         7607951.546 ops/s
+
+Iteration   7: 16887070.075 ops/s
+                 offerRetries: 26830660.000 #
+                 pollRetries:  35926.000 #
+                 put:          8456555.459 ops/s
+                 take:         8430514.616 ops/s
+
+
+# Run progress: 13.33% complete, ETA 00:02:39
+# Fork: 3 of 3
+# Warmup Iteration   1: 18406965.434 ops/s
+# Warmup Iteration   2: 17552799.165 ops/s
+# Warmup Iteration   3: 18273859.089 ops/s
+# Warmup Iteration   4: 19362152.300 ops/s
+# Warmup Iteration   5: 17773904.883 ops/s
+Iteration   1: 15831068.977 ops/s
+                 offerRetries: 60137072.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7902551.751 ops/s
+                 take:         7928517.226 ops/s
+
+Iteration   2: 17314751.076 ops/s
+                 offerRetries: 7212868.000 #
+                 pollRetries:  4534444.000 #
+                 put:          8673742.042 ops/s
+                 take:         8641009.034 ops/s
+
+Iteration   3: 17970704.044 ops/s
+                 offerRetries: 19645753.000 #
+                 pollRetries:  38710.000 #
+                 put:          9001186.645 ops/s
+                 take:         8969517.398 ops/s
+
+Iteration   4: 19309014.516 ops/s
+                 offerRetries: 10213345.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          9670901.215 ops/s
+                 take:         9638113.300 ops/s
+
+Iteration   5: 15786920.025 ops/s
+                 offerRetries: 87509984.000 #
+                 pollRetries:  769639.000 #
+                 put:          7909753.328 ops/s
+                 take:         7877166.698 ops/s
+
+Iteration   6: 17486172.188 ops/s
+                 offerRetries: 38271516.000 #
+                 pollRetries:  101760.000 #
+                 put:          8759386.119 ops/s
+                 take:         8726786.068 ops/s
+
+Iteration   7: 16920853.619 ops/s
+                 offerRetries: 17149950.000 #
+                 pollRetries:  28.000 #
+                 put:          8475067.911 ops/s
+                 take:         8445785.708 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers":
+  17766311.968 ±(99.9%) 1654310.978 ops/s [Average]
+  (min, avg, max) = (15247662.503, 17766311.968, 22387869.168), stdev = 1969339.714
+  CI (99.9%): [16112000.990, 19420622.946] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:offerRetries":
+  581229189.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (≈ 0, 27677580.429, 88031282.000), stdev = 28723426.150
+  CI (99.9%): [581229189.000, 581229189.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:pollRetries":
+  8113699.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (≈ 0, 386366.619, 4534444.000), stdev = 985524.993
+  CI (99.9%): [8113699.000, 8113699.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:put":
+  8890693.045 ±(99.9%) 825355.405 ops/s [Average]
+  (min, avg, max) = (7639710.957, 8890693.045, 11190188.430), stdev = 982526.985
+  CI (99.9%): [8065337.639, 9716048.450] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:take":
+  8875618.924 ±(99.9%) 829079.327 ops/s [Average]
+  (min, avg, max) = (7607951.546, 8875618.924, 11197680.739), stdev = 986960.049
+  CI (99.9%): [8046539.597, 9704698.250] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 2x "put", 2x "take" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = stride-padded)
+
+# Run progress: 20.00% complete, ETA 00:02:27
+# Fork: 1 of 3
+# Warmup Iteration   1: 22239323.903 ops/s
+# Warmup Iteration   2: 16993576.362 ops/s
+# Warmup Iteration   3: 23917668.036 ops/s
+# Warmup Iteration   4: 16779534.879 ops/s
+# Warmup Iteration   5: 16007972.866 ops/s
+Iteration   1: 14813800.237 ops/s
+                 offerRetries: 44264683.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7423144.169 ops/s
+                 take:         7390656.068 ops/s
+
+Iteration   2: 23954617.766 ops/s
+                 offerRetries: 34225408.000 #
+                 pollRetries:  19.000 #
+                 put:          11992307.151 ops/s
+                 take:         11962310.616 ops/s
+
+Iteration   3: 15496111.834 ops/s
+                 offerRetries: 87886637.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7764818.766 ops/s
+                 take:         7731293.069 ops/s
+
+Iteration   4: 20577164.643 ops/s
+                 offerRetries: 8087782.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          10282573.034 ops/s
+                 take:         10294591.609 ops/s
+
+Iteration   5: 16148632.056 ops/s
+                 offerRetries: 36443781.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8089843.018 ops/s
+                 take:         8058789.039 ops/s
+
+Iteration   6: 15028982.678 ops/s
+                 offerRetries: 90400732.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7530796.967 ops/s
+                 take:         7498185.711 ops/s
+
+Iteration   7: 16001256.472 ops/s
+                 offerRetries: 40650206.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8016857.687 ops/s
+                 take:         7984398.785 ops/s
+
+
+# Run progress: 26.67% complete, ETA 00:02:14
+# Fork: 2 of 3
+# Warmup Iteration   1: 16764865.484 ops/s
+# Warmup Iteration   2: 17194017.398 ops/s
+# Warmup Iteration   3: 20703444.262 ops/s
+# Warmup Iteration   4: 21383214.241 ops/s
+# Warmup Iteration   5: 15544940.657 ops/s
+Iteration   1: 19163104.267 ops/s
+                 offerRetries: 11020560.000 #
+                 pollRetries:  50666.000 #
+                 put:          9585557.495 ops/s
+                 take:         9577546.772 ops/s
+
+Iteration   2: 15267406.190 ops/s
+                 offerRetries: 104514907.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7637232.196 ops/s
+                 take:         7630173.994 ops/s
+
+Iteration   3: 17834001.756 ops/s
+                 offerRetries: 16327170.000 #
+                 pollRetries:  9312.000 #
+                 put:          8932161.196 ops/s
+                 take:         8901840.560 ops/s
+
+Iteration   4: 14863648.488 ops/s
+                 offerRetries: 104598764.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7447447.181 ops/s
+                 take:         7416201.307 ops/s
+
+Iteration   5: 16958541.492 ops/s
+                 offerRetries: 19327966.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8494583.379 ops/s
+                 take:         8463958.114 ops/s
+
+Iteration   6: 19577493.320 ops/s
+                 offerRetries: 3536876.000 #
+                 pollRetries:  1.000 #
+                 put:          9804769.134 ops/s
+                 take:         9772724.187 ops/s
+
+Iteration   7: 15967199.508 ops/s
+                 offerRetries: 90637729.000 #
+                 pollRetries:  87180.000 #
+                 put:          7999887.637 ops/s
+                 take:         7967311.871 ops/s
+
+
+# Run progress: 33.33% complete, ETA 00:02:02
+# Fork: 3 of 3
+# Warmup Iteration   1: 21760077.134 ops/s
+# Warmup Iteration   2: 18423695.392 ops/s
+# Warmup Iteration   3: 18626854.896 ops/s
+# Warmup Iteration   4: 15633003.621 ops/s
+# Warmup Iteration   5: 15821093.565 ops/s
+Iteration   1: 16102016.463 ops/s
+                 offerRetries: 40672105.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8067102.059 ops/s
+                 take:         8034914.404 ops/s
+
+Iteration   2: 14502950.490 ops/s
+                 offerRetries: 98481513.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7267790.495 ops/s
+                 take:         7235159.995 ops/s
+
+Iteration   3: 21695688.700 ops/s
+                 offerRetries: 50705268.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          10863902.739 ops/s
+                 take:         10831785.960 ops/s
+
+Iteration   4: 15261173.612 ops/s
+                 offerRetries: 90726015.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          7644298.221 ops/s
+                 take:         7616875.391 ops/s
+
+Iteration   5: 18899065.647 ops/s
+                 offerRetries: 5584518.000 #
+                 pollRetries:  59866.000 #
+                 put:          9465803.181 ops/s
+                 take:         9433262.466 ops/s
+
+Iteration   6: 18684434.375 ops/s
+                 offerRetries: 6041601.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          9357198.098 ops/s
+                 take:         9327236.277 ops/s
+
+Iteration   7: 16040957.257 ops/s
+                 offerRetries: 42317665.000 #
+                 pollRetries:  ≈ 0 #
+                 put:          8034727.027 ops/s
+                 take:         8006230.230 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers":
+  17278011.774 ±(99.9%) 2160687.408 ops/s [Average]
+  (min, avg, max) = (14502950.490, 17278011.774, 23954617.766), stdev = 2572144.886
+  CI (99.9%): [15117324.366, 19438699.182] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:offerRetries":
+  1026451886.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (3536876.000, 48878661.238, 104598764.000), stdev = 36584566.316
+  CI (99.9%): [1026451886.000, 1026451886.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:pollRetries":
+  207044.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (≈ 0, 9859.238, 87180.000), stdev = 24286.572
+  CI (99.9%): [207044.000, 207044.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:put":
+  8652514.325 ±(99.9%) 1079148.057 ops/s [Average]
+  (min, avg, max) = (7267790.495, 8652514.325, 11992307.151), stdev = 1284649.110
+  CI (99.9%): [7573366.268, 9731662.382] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:take":
+  8625497.449 ±(99.9%) 1081559.768 ops/s [Average]
+  (min, avg, max) = (7235159.995, 8625497.449, 11962310.616), stdev = 1287520.081
+  CI (99.9%): [7543937.680, 9707057.217] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 2x "put", 2x "take" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = array-blocking)
+
+# Run progress: 40.00% complete, ETA 00:01:50
+# Fork: 1 of 3
+# Warmup Iteration   1: 119533689.380 ops/s
+# Warmup Iteration   2: 149904381.583 ops/s
+# Warmup Iteration   3: 158111582.058 ops/s
+# Warmup Iteration   4: 154567505.290 ops/s
+# Warmup Iteration   5: 156603522.644 ops/s
+Iteration   1: 158101490.295 ops/s
+                 offerRetries: 7050556.000 #
+                 pollRetries:  3487405.000 #
+                 put:          79051168.810 ops/s
+                 take:         79050321.485 ops/s
+
+Iteration   2: 142665042.037 ops/s
+                 offerRetries: 7298374.000 #
+                 pollRetries:  1587416.000 #
+                 put:          71318800.487 ops/s
+                 take:         71346241.550 ops/s
+
+Iteration   3: 154306824.335 ops/s
+                 offerRetries: 10518877.000 #
+                 pollRetries:  981241.000 #
+                 put:          77162062.364 ops/s
+                 take:         77144761.971 ops/s
+
+Iteration   4: 152293915.227 ops/s
+                 offerRetries: 11427309.000 #
+                 pollRetries:  480313.000 #
+                 put:          76155215.572 ops/s
+                 take:         76138699.655 ops/s
+
+Iteration   5: 119795759.753 ops/s
+                 offerRetries: 8120107.000 #
+                 pollRetries:  7065422.000 #
+                 put:          59873527.075 ops/s
+                 take:         59922232.679 ops/s
+
+Iteration   6: 152091606.596 ops/s
+                 offerRetries: 2542418.000 #
+                 pollRetries:  5415620.000 #
+                 put:          76048248.353 ops/s
+                 take:         76043358.242 ops/s
+
+Iteration   7: 150653376.336 ops/s
+                 offerRetries: 2806764.000 #
+                 pollRetries:  4310325.000 #
+                 put:          75339603.089 ops/s
+                 take:         75313773.247 ops/s
+
+
+# Run progress: 46.67% complete, ETA 00:01:38
+# Fork: 2 of 3
+# Warmup Iteration   1: 156024929.252 ops/s
+# Warmup Iteration   2: 142324496.118 ops/s
+# Warmup Iteration   3: 148681762.472 ops/s
+# Warmup Iteration   4: 151938532.514 ops/s
+# Warmup Iteration   5: 150779337.710 ops/s
+Iteration   1: 147511953.155 ops/s
+                 offerRetries: 2731737.000 #
+                 pollRetries:  4442910.000 #
+                 put:          73765707.454 ops/s
+                 take:         73746245.702 ops/s
+
+Iteration   2: 137605868.911 ops/s
+                 offerRetries: 3728366.000 #
+                 pollRetries:  2691318.000 #
+                 put:          68809014.861 ops/s
+                 take:         68796854.050 ops/s
+
+Iteration   3: 149835657.691 ops/s
+                 offerRetries: 9127760.000 #
+                 pollRetries:  1566842.000 #
+                 put:          74931258.540 ops/s
+                 take:         74904399.151 ops/s
+
+Iteration   4: 151082548.897 ops/s
+                 offerRetries: 9564888.000 #
+                 pollRetries:  1389258.000 #
+                 put:          75556949.915 ops/s
+                 take:         75525598.981 ops/s
+
+Iteration   5: 130204159.156 ops/s
+                 offerRetries: 1805924.000 #
+                 pollRetries:  11948434.000 #
+                 put:          65107025.501 ops/s
+                 take:         65097133.655 ops/s
+
+Iteration   6: 127908059.466 ops/s
+                 offerRetries: 2081242.000 #
+                 pollRetries:  8684457.000 #
+                 put:          63939190.755 ops/s
+                 take:         63968868.711 ops/s
+
+Iteration   7: 139882947.964 ops/s
+                 offerRetries: 924008.000 #
+                 pollRetries:  8667132.000 #
+                 put:          69931761.933 ops/s
+                 take:         69951186.031 ops/s
+
+
+# Run progress: 53.33% complete, ETA 00:01:25
+# Fork: 3 of 3
+# Warmup Iteration   1: 148016650.161 ops/s
+# Warmup Iteration   2: 139933901.308 ops/s
+# Warmup Iteration   3: 150610563.540 ops/s
+# Warmup Iteration   4: 140943580.334 ops/s
+# Warmup Iteration   5: 147066166.055 ops/s
+Iteration   1: 151035304.883 ops/s
+                 offerRetries: 3122009.000 #
+                 pollRetries:  5593448.000 #
+                 put:          75504798.626 ops/s
+                 take:         75530506.257 ops/s
+
+Iteration   2: 141009954.821 ops/s
+                 offerRetries: 3024258.000 #
+                 pollRetries:  7750303.000 #
+                 put:          70487877.246 ops/s
+                 take:         70522077.575 ops/s
+
+Iteration   3: 128706410.997 ops/s
+                 offerRetries: 3450181.000 #
+                 pollRetries:  3681196.000 #
+                 put:          64345008.722 ops/s
+                 take:         64361402.275 ops/s
+
+Iteration   4: 142910858.439 ops/s
+                 offerRetries: 1626133.000 #
+                 pollRetries:  6016005.000 #
+                 put:          71457714.360 ops/s
+                 take:         71453144.080 ops/s
+
+Iteration   5: 130767438.720 ops/s
+                 offerRetries: 2660764.000 #
+                 pollRetries:  3661768.000 #
+                 put:          65370427.465 ops/s
+                 take:         65397011.255 ops/s
+
+Iteration   6: 131362147.291 ops/s
+                 offerRetries: 2349446.000 #
+                 pollRetries:  4428730.000 #
+                 put:          65691415.961 ops/s
+                 take:         65670731.331 ops/s
+
+Iteration   7: 144825625.314 ops/s
+                 offerRetries: 1188210.000 #
+                 pollRetries:  7482095.000 #
+                 put:          72411053.404 ops/s
+                 take:         72414571.910 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers":
+  142121759.537 ±(99.9%) 8869878.136 ops/s [Average]
+  (min, avg, max) = (119795759.753, 142121759.537, 158101490.295), stdev = 10558959.895
+  CI (99.9%): [133251881.402, 150991637.673] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:offerRetries":
+  97149331.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (924008.000, 4626158.619, 11427309.000), stdev = 3369880.917
+  CI (99.9%): [97149331.000, 97149331.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:pollRetries":
+  101331638.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (480313.000, 4825316.095, 11948434.000), stdev = 2995991.486
+  CI (99.9%): [101331638.000, 101331638.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:put":
+  71059896.690 ±(99.9%) 4440360.040 ops/s [Average]
+  (min, avg, max) = (59873527.075, 71059896.690, 79051168.810), stdev = 5285933.230
+  CI (99.9%): [66619536.650, 75500256.731] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:take":
+  71061862.847 ±(99.9%) 4429533.688 ops/s [Average]
+  (min, avg, max) = (59922232.679, 71061862.847, 79050321.485), stdev = 5273045.227
+  CI (99.9%): [66632329.159, 75491396.535] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 2x "put", 2x "take" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = michael-scott)
+
+# Run progress: 60.00% complete, ETA 00:01:13
+# Fork: 1 of 3
+# Warmup Iteration   1: 20273846.132 ops/s
+# Warmup Iteration   2: 11597138.807 ops/s
+# Warmup Iteration   3: 13113485.615 ops/s
+# Warmup Iteration   4: 21485821.036 ops/s
+# Warmup Iteration   5: 11492453.129 ops/s
+Iteration   1: 14310034.835 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  13218431.000 #
+                 put:          7139978.937 ops/s
+                 take:         7170055.898 ops/s
+
+Iteration   2: 24952658.052 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  353579.000 #
+                 put:          14139578.132 ops/s
+                 take:         10813079.920 ops/s
+
+Iteration   3: 15506196.817 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  13088845.000 #
+                 put:          7736715.580 ops/s
+                 take:         7769481.237 ops/s
+
+Iteration   4: 23452864.725 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          12824636.112 ops/s
+                 take:         10628228.613 ops/s
+
+Iteration   5: 20067771.382 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          11696079.735 ops/s
+                 take:         8371691.646 ops/s
+
+Iteration   6: 11815201.216 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  14247639.000 #
+                 put:          5891227.262 ops/s
+                 take:         5923973.954 ops/s
+
+Iteration   7: 16456865.620 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  8058268.000 #
+                 put:          8891756.070 ops/s
+                 take:         7565109.550 ops/s
+
+
+# Run progress: 66.67% complete, ETA 00:01:01
+# Fork: 2 of 3
+# Warmup Iteration   1: 21838318.592 ops/s
+# Warmup Iteration   2: 19646555.914 ops/s
+# Warmup Iteration   3: 18276398.775 ops/s
+# Warmup Iteration   4: 18936984.162 ops/s
+# Warmup Iteration   5: 11465099.961 ops/s
+Iteration   1: 11318246.100 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  16384184.000 #
+                 put:          5645415.927 ops/s
+                 take:         5672830.172 ops/s
+
+Iteration   2: 20054431.744 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  260527.000 #
+                 put:          10648054.680 ops/s
+                 take:         9406377.064 ops/s
+
+Iteration   3: 18938133.322 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          9991207.752 ops/s
+                 take:         8946925.570 ops/s
+
+Iteration   4: 18745399.001 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          10027815.598 ops/s
+                 take:         8717583.403 ops/s
+
+Iteration   5: 20348361.585 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          10582300.461 ops/s
+                 take:         9766061.123 ops/s
+
+Iteration   6: 12049994.511 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  8946261.000 #
+                 put:          6008631.847 ops/s
+                 take:         6041362.663 ops/s
+
+Iteration   7: 22224299.727 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          12895215.023 ops/s
+                 take:         9329084.704 ops/s
+
+
+# Run progress: 73.33% complete, ETA 00:00:49
+# Fork: 3 of 3
+# Warmup Iteration   1: 19510084.371 ops/s
+# Warmup Iteration   2: 22586038.709 ops/s
+# Warmup Iteration   3: 21127383.879 ops/s
+# Warmup Iteration   4: 12878705.449 ops/s
+# Warmup Iteration   5: 20745181.121 ops/s
+Iteration   1: 21011310.652 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          12141659.012 ops/s
+                 take:         8869651.640 ops/s
+
+Iteration   2: 21256210.897 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          12603234.878 ops/s
+                 take:         8652976.019 ops/s
+
+Iteration   3: 17320971.000 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  7270842.000 #
+                 put:          9520156.652 ops/s
+                 take:         7800814.347 ops/s
+
+Iteration   4: 12887840.855 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  14325972.000 #
+                 put:          6427599.745 ops/s
+                 take:         6460241.109 ops/s
+
+Iteration   5: 23046864.034 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          13862250.353 ops/s
+                 take:         9184613.681 ops/s
+
+Iteration   6: 21310389.301 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          12560969.581 ops/s
+                 take:         8749419.720 ops/s
+
+Iteration   7: 20771946.473 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          11788231.940 ops/s
+                 take:         8983714.533 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers":
+  18468856.755 ±(99.9%) 3451525.444 ops/s [Average]
+  (min, avg, max) = (11318246.100, 18468856.755, 24952658.052), stdev = 4108795.880
+  CI (99.9%): [15017331.311, 21920382.199] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:offerRetries":
+  ≈ 0 #
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:pollRetries":
+  96154548.000 ±(99.9%) 0.001 # [Sum]
+  (min, avg, max) = (≈ 0, 4578788.000, 16384184.000), stdev = 6246891.115
+  CI (99.9%): [96154548.000, 96154548.000] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:put":
+  10143938.823 ±(99.9%) 2316066.531 ops/s [Average]
+  (min, avg, max) = (5645415.927, 10143938.823, 14139578.132), stdev = 2757112.695
+  CI (99.9%): [7827872.292, 12460005.353] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:take":
+  8324917.932 ±(99.9%) 1217843.501 ops/s [Average]
+  (min, avg, max) = (5672830.172, 8324917.932, 10813079.920), stdev = 1449756.185
+  CI (99.9%): [7107074.431, 9542761.433] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.10, OpenJDK 64-Bit Server VM, 21.0.10
+# VM invoker: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -Xms1g -Xmx1g -XX:+AlwaysPreTouch
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads (1 group; 2x "put", 2x "take" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers
+# Parameters: (capacity = 65536, implementation = jdk-clq)
+
+# Run progress: 80.00% complete, ETA 00:00:36
+# Fork: 1 of 3
+# Warmup Iteration   1: 25673349.322 ops/s
+# Warmup Iteration   2: 30073814.984 ops/s
+# Warmup Iteration   3: 27728432.634 ops/s
+# Warmup Iteration   4: 27140659.554 ops/s
+# Warmup Iteration   5: 27474989.967 ops/s
+Iteration   1: 31573306.967 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16755697.694 ops/s
+                 take:         14817609.273 ops/s
+
+Iteration   2: 28383274.388 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15607259.318 ops/s
+                 take:         12776015.069 ops/s
+
+Iteration   3: 29680141.122 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16621118.467 ops/s
+                 take:         13059022.655 ops/s
+
+Iteration   4: 28849361.205 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15201647.834 ops/s
+                 take:         13647713.371 ops/s
+
+Iteration   5: 29554052.680 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16047659.768 ops/s
+                 take:         13506392.912 ops/s
+
+Iteration   6: 28588279.170 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15912442.978 ops/s
+                 take:         12675836.192 ops/s
+
+Iteration   7: 30925347.078 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16669123.449 ops/s
+                 take:         14256223.629 ops/s
+
+
+# Run progress: 86.67% complete, ETA 00:00:24
+# Fork: 2 of 3
+# Warmup Iteration   1: 27315462.759 ops/s
+# Warmup Iteration   2: 27225358.243 ops/s
+# Warmup Iteration   3: 28774794.380 ops/s
+# Warmup Iteration   4: 32262188.626 ops/s
+# Warmup Iteration   5: 36963573.019 ops/s
+Iteration   1: 29050520.072 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15606235.506 ops/s
+                 take:         13444284.566 ops/s
+
+Iteration   2: 28835238.450 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15971230.431 ops/s
+                 take:         12864008.019 ops/s
+
+Iteration   3: 32523848.636 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          17578465.370 ops/s
+                 take:         14945383.265 ops/s
+
+Iteration   4: 28697797.822 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15966585.875 ops/s
+                 take:         12731211.947 ops/s
+
+Iteration   5: 26589284.893 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          14546016.823 ops/s
+                 take:         12043268.070 ops/s
+
+Iteration   6: 29466926.990 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16445401.465 ops/s
+                 take:         13021525.525 ops/s
+
+Iteration   7: 30394460.857 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16572880.176 ops/s
+                 take:         13821580.680 ops/s
+
+
+# Run progress: 93.33% complete, ETA 00:00:12
+# Fork: 3 of 3
+# Warmup Iteration   1: 27748105.318 ops/s
+# Warmup Iteration   2: 28127322.504 ops/s
+# Warmup Iteration   3: 29103088.867 ops/s
+# Warmup Iteration   4: 28479441.533 ops/s
+# Warmup Iteration   5: 27220396.581 ops/s
+Iteration   1: 27462653.015 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          14472506.757 ops/s
+                 take:         12990146.258 ops/s
+
+Iteration   2: 30459794.892 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16581841.045 ops/s
+                 take:         13877953.847 ops/s
+
+Iteration   3: 29937812.832 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          16273575.375 ops/s
+                 take:         13664237.457 ops/s
+
+Iteration   4: 23488940.065 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          11827697.876 ops/s
+                 take:         11661242.188 ops/s
+
+Iteration   5: 26620426.067 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          14157245.347 ops/s
+                 take:         12463180.720 ops/s
+
+Iteration   6: 27899541.495 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          14769692.169 ops/s
+                 take:         13129849.326 ops/s
+
+Iteration   7: 28258006.128 ops/s
+                 offerRetries: ≈ 0 #
+                 pollRetries:  ≈ 0 #
+                 put:          15212896.390 ops/s
+                 take:         13045109.739 ops/s
+
+
+
+Result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers":
+  28916143.563 ±(99.9%) 1628945.622 ops/s [Average]
+  (min, avg, max) = (23488940.065, 28916143.563, 32523848.636), stdev = 1939144.059
+  CI (99.9%): [27287197.941, 30545089.185] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:offerRetries":
+  ≈ 0 #
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:pollRetries":
+  ≈ 0 #
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:put":
+  15657010.482 ±(99.9%) 1040904.512 ops/s [Average]
+  (min, avg, max) = (11827697.876, 15657010.482, 17578465.370), stdev = 1239122.886
+  CI (99.9%): [14616105.970, 16697914.994] (assumes normal distribution)
+
+Secondary result "io.github.ag0708.stridequeue.benchmarks.QueueBenchmark.transfers:take":
+  13259133.081 ±(99.9%) 684543.357 ops/s [Average]
+  (min, avg, max) = (11661242.188, 13259133.081, 14945383.265), stdev = 814900.244
+  CI (99.9%): [12574589.724, 13943676.439] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:04
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                              (capacity)  (implementation)   Mode  Cnt           Score         Error  Units
+QueueBenchmark.transfers                    65536    stride-compact  thrpt   21    17766311.968 ± 1654310.978  ops/s
+QueueBenchmark.transfers:offerRetries       65536    stride-compact  thrpt   21   581229189.000                    #
+QueueBenchmark.transfers:pollRetries        65536    stride-compact  thrpt   21     8113699.000                    #
+QueueBenchmark.transfers:put                65536    stride-compact  thrpt   21     8890693.045 ±  825355.405  ops/s
+QueueBenchmark.transfers:take               65536    stride-compact  thrpt   21     8875618.924 ±  829079.327  ops/s
+QueueBenchmark.transfers                    65536     stride-padded  thrpt   21    17278011.774 ± 2160687.408  ops/s
+QueueBenchmark.transfers:offerRetries       65536     stride-padded  thrpt   21  1026451886.000                    #
+QueueBenchmark.transfers:pollRetries        65536     stride-padded  thrpt   21      207044.000                    #
+QueueBenchmark.transfers:put                65536     stride-padded  thrpt   21     8652514.325 ± 1079148.057  ops/s
+QueueBenchmark.transfers:take               65536     stride-padded  thrpt   21     8625497.449 ± 1081559.768  ops/s
+QueueBenchmark.transfers                    65536    array-blocking  thrpt   21   142121759.537 ± 8869878.136  ops/s
+QueueBenchmark.transfers:offerRetries       65536    array-blocking  thrpt   21    97149331.000                    #
+QueueBenchmark.transfers:pollRetries        65536    array-blocking  thrpt   21   101331638.000                    #
+QueueBenchmark.transfers:put                65536    array-blocking  thrpt   21    71059896.690 ± 4440360.040  ops/s
+QueueBenchmark.transfers:take               65536    array-blocking  thrpt   21    71061862.847 ± 4429533.688  ops/s
+QueueBenchmark.transfers                    65536     michael-scott  thrpt   21    18468856.755 ± 3451525.444  ops/s
+QueueBenchmark.transfers:offerRetries       65536     michael-scott  thrpt   21             ≈ 0                    #
+QueueBenchmark.transfers:pollRetries        65536     michael-scott  thrpt   21    96154548.000                    #
+QueueBenchmark.transfers:put                65536     michael-scott  thrpt   21    10143938.823 ± 2316066.531  ops/s
+QueueBenchmark.transfers:take               65536     michael-scott  thrpt   21     8324917.932 ± 1217843.501  ops/s
+QueueBenchmark.transfers                    65536           jdk-clq  thrpt   21    28916143.563 ± 1628945.622  ops/s
+QueueBenchmark.transfers:offerRetries       65536           jdk-clq  thrpt   21             ≈ 0                    #
+QueueBenchmark.transfers:pollRetries        65536           jdk-clq  thrpt   21             ≈ 0                    #
+QueueBenchmark.transfers:put                65536           jdk-clq  thrpt   21    15657010.482 ± 1040904.512  ops/s
+QueueBenchmark.transfers:take               65536           jdk-clq  thrpt   21    13259133.081 ±  684543.357  ops/s
+
+Benchmark result is saved to artifacts/benchmarks/release-bcf2e14/mpmc.json

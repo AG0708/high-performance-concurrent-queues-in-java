@@ -59,7 +59,8 @@ public final class MpscArrayQueue<E> implements ConcurrentFifo<E> {
      *
      * <p>The method performs one cursor compare-and-set for the entire batch. It
      * returns {@code false} without modifying the queue when there is not enough
-     * room for every element.
+     * room for every element. The caller must not modify the selected source
+     * range until this method returns.
      *
      * @param source source array
      * @param offset first source index
@@ -110,6 +111,7 @@ public final class MpscArrayQueue<E> implements ConcurrentFifo<E> {
      * <p>This method follows the same single-consumer rule as {@link #poll()}.
      * Values are staged in the destination before queue state is changed, so an
      * incompatible destination array cannot leave the queue half-consumed.
+     * The destination range must not be modified concurrently.
      *
      * @param destination destination array
      * @param offset first destination index

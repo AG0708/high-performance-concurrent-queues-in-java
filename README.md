@@ -37,8 +37,10 @@ Use `MichaelScottQueue` when strict lock-freedom matters. Use an array queue whe
 
 - JUnit checks boundaries, wraparound, batch behavior, and 800 randomized histories against an exhaustive FIFO model.
 - MPMC stress tests verify that every unique value is consumed exactly once.
-- JCStress exercises publication, concurrent claims, tail helping, and contiguous batch reservation across JVM compilation modes.
+- JCStress exercised publication, concurrent claims, tail helping, and contiguous batch reservation across 510 result configurations and 12.7B sampled outcomes with no forbidden result. [Raw JCStress evidence](evidence/jcstress/2026-08-11-bcf2e14/)
 - JMH reports successful operations, retries, raw samples, confidence intervals, JVM flags, and host details.
+
+On an Apple M5 with four threads, the 32-element MPSC batch path averaged **380.9M queue operations/sec**, **2.69x** the `ArrayBlockingQueue` loop. This result covers three producers, one consumer, and batches of 32; it is not a single-element claim. [Raw release evidence](evidence/benchmarks/2026-08-11-bcf2e14/)
 
 The original resume claim of 38M ops/s and an 11x speedup was not carried forward without evidence. Current results and exact limitations are recorded in [docs/BENCHMARKS.md](docs/BENCHMARKS.md).
 
