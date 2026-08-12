@@ -1,0 +1,11 @@
+target/
+dependency-reduced-pom.xml
+.idea/
+.vscode/
+*.iml
+.DS_Store
+artifacts/benchmarks/
+artifacts/jcstress/
+artifacts/test-runs/
+scripts/__pycache__/
+jcstress-results-*.bin.gz
