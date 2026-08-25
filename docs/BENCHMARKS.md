@@ -17,7 +17,7 @@ Full/empty retries are exposed as secondary counters. Failed attempts are not pr
 
 Apple M5, 10 cores, 16 GB RAM, OpenJDK 21.0.10, macOS 26.5.1. JMH reports 99.9% confidence errors.
 
-| Workload | StrideQueue | JDK baseline | Ratio |
+| Workload | Custom queue | JDK baseline | Ratio |
 | --- | ---: | ---: | ---: |
 | 3P/1C, batches of 32 | 380.9M +/- 62.0M ops/s | 141.8M +/- 6.9M ops/s | 2.69x |
 | 3P/1C, single elements | 16.9M +/- 1.5M ops/s | 118.9M +/- 13.7M ops/s | 0.14x |

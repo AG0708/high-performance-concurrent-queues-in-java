@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>stridequeue-benchmarks</artifactId>
-  <name>StrideQueue Benchmarks</name>
+  <name>Concurrent Queues Benchmarks</name>
 
   <dependencies>
     <dependency>

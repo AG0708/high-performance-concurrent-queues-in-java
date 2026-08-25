@@ -79,7 +79,7 @@ def main() -> int:
         "",
         "JMH throughput; capacity 65,536; successful enqueue and dequeue operations are both counted.",
         "",
-        "| Workload | StrideQueue | JDK baseline | Ratio |",
+        "| Workload | Custom queue | JDK baseline | Ratio |",
         "| --- | ---: | ---: | ---: |",
         (
             "| 3P/1C, batches of 32 | "

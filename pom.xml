@@ -9,9 +9,9 @@
   <version>1.0.0</version>
   <packaging>pom</packaging>
 
-  <name>StrideQueue</name>
-  <description>Concurrent queue implementations for Java.</description>
-  <url>https://github.com/AG0708/StrideQueue</url>
+  <name>High-Performance Concurrent Queues in Java</name>
+  <description>High-performance concurrent queues for Java.</description>
+  <url>https://github.com/AG0708/high-performance-concurrent-queues-in-java</url>
 
   <licenses>
     <license>

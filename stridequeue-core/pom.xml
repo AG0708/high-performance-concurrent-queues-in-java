@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>stridequeue-core</artifactId>
-  <name>StrideQueue Core</name>
+  <name>Concurrent Queues Core</name>
 
   <dependencies>
     <dependency>

@@ -1,4 +1,4 @@
-# StrideQueue
+# High-Performance Concurrent Queues in Java
 
 Concurrent FIFO queue implementations for Java 17.
 

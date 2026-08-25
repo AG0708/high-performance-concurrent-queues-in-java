@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>stridequeue-jcstress</artifactId>
-  <name>StrideQueue JCStress</name>
+  <name>Concurrent Queues JCStress</name>
 
   <dependencies>
     <dependency>
