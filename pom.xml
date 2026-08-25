@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
 
   <name>StrideQueue</name>
-  <description>Concurrent queue algorithms for Java with correctness tests and reproducible benchmarks.</description>
+  <description>Concurrent queue implementations for Java.</description>
   <url>https://github.com/AG0708/StrideQueue</url>
 
   <licenses>

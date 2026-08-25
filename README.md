@@ -1,28 +1,20 @@
 # StrideQueue
 
-StrideQueue is a Java 17 library for studying concurrent FIFO design. It includes a lock-free linked queue, bounded array queues, stress tests, a linearizability checker, JCStress tests, and JMH benchmarks.
+Concurrent FIFO queue implementations for Java 17.
 
 ## Implementations
 
 | Queue | Producers | Consumers | Capacity | Progress |
 | --- | ---: | ---: | --- | --- |
 | `MichaelScottQueue` | many | many | unbounded | lock-free |
-| `MpmcArrayQueue` | many | many | fixed | non-blocking API; a reserved slot can stall progress |
-| `MpscArrayQueue` | many | one | fixed | non-blocking API; a reserved slot can stall progress |
+| `MpmcArrayQueue` | many | many | fixed | non-blocking API |
+| `MpscArrayQueue` | many | one | fixed | non-blocking API |
 
-The array queues use `VarHandle` acquire/release operations, separated producer and consumer cursors, and no allocation after construction. `MpscArrayQueue` also supports 32-element-style batch claims and drains with one shared cursor update per batch.
+The array queues use `VarHandle` acquire/release operations and allocate no
+nodes after construction. `MpscArrayQueue` also supports batch operations. The
+bounded queues are not lock-free: a delayed producer can stall a reserved slot.
 
-## Run it
-
-Java 17 or newer is required. Maven is downloaded by the checked and pinned wrapper.
-
-```bash
-scripts/check.sh
-scripts/run-jcstress.sh quick
-scripts/run-benchmarks.sh quick
-```
-
-Library use is deliberately small:
+## Use
 
 ```java
 MpscArrayQueue<Event> queue = new MpscArrayQueue<>(65_536);
@@ -31,25 +23,26 @@ queue.offer(event);        // false when full
 Event next = queue.poll(); // null when empty; one consumer only
 ```
 
-Use `MichaelScottQueue` when strict lock-freedom matters. Use an array queue when fixed memory and no per-operation allocation matter.
+Use `MichaelScottQueue` for lock-free progress. Use an array queue for fixed
+memory and no per-operation allocation.
 
-## Evidence
+## Test
 
-- JUnit checks boundaries, wraparound, batch behavior, and 800 randomized histories against an exhaustive FIFO model.
-- MPMC stress tests verify that every unique value is consumed exactly once.
-- JCStress exercised publication, concurrent claims, tail helping, and contiguous batch reservation across 510 result configurations and 12.7B sampled outcomes with no forbidden result. [Raw JCStress evidence](evidence/jcstress/2026-08-11-bcf2e14/)
-- JMH reports successful operations, retries, raw samples, confidence intervals, JVM flags, and host details.
+```sh
+scripts/check.sh
+scripts/run-jcstress.sh quick
+scripts/run-benchmarks.sh quick
+```
 
-On an Apple M5 with four threads, the 32-element MPSC batch path averaged **380.9M queue operations/sec**, **2.69x** the `ArrayBlockingQueue` loop. This result covers three producers, one consumer, and batches of 32; it is not a single-element claim. [Raw release evidence](evidence/benchmarks/2026-08-11-bcf2e14/)
+## Benchmark
 
-The original resume claim of 38M ops/s and an 11x speedup was not carried forward without evidence. Current results and exact limitations are recorded in [docs/BENCHMARKS.md](docs/BENCHMARKS.md).
+On an Apple M5 with three producers, one consumer, and batches of 32, the MPSC
+batch path averaged 380.9M operations/sec, 2.69x the `ArrayBlockingQueue` loop.
+Single-element results were slower than the JDK baseline.
 
-## Repository map
+See [BENCHMARKS.md](docs/BENCHMARKS.md) and the
+[raw results](evidence/benchmarks/2026-08-11-bcf2e14/).
 
-- `stridequeue-core`: queue implementations and JUnit tests
-- `stridequeue-jcstress`: JVM memory-model tests
-- `stridequeue-benchmarks`: JMH workloads
-- `docs`: design, correctness, and benchmark notes
-- `scripts`: one-command verification and evidence capture
+## License
 
-See [DESIGN.md](docs/DESIGN.md) for invariants and [CORRECTNESS.md](docs/CORRECTNESS.md) for the test strategy.
+MIT. See [`LICENSE`](LICENSE).
